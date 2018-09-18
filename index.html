@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Zhipeng He">
+
+    <title>CD-HIT-Suite</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="./vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="./dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="./vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- stom Fonts -->
+    <link href="./vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">CD-HIT Suite: Biological Sequence Clustering and Comparison</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> New Comment
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> New Task
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="pages/login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <!-- navbar-sidebar start-->
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+
+                        <li>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Server Home</a>
+                        </li>
+
+                        <li>
+                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Each Server<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="pages/cd-hit.html">cd-hit</a>
+                                </li>
+                                <li>
+                                    <a href="pages/cd-hit-est.html">cd-hit-est</a>
+                                </li>
+                                <li>
+                                    <a href="pages/h-cd-hit.html">h-cd-hit</a>
+                                </li>
+                                <li>
+                                    <a href="pages/h-cd-hit-est.html">h-cd-hit-est</a>
+                                </li>
+                                <li>
+                                    <a href="pages/cd-hit-2d.html">cd-hit-2d</a>
+                                </li>
+                                <li>
+                                    <a href="pages/cd-hit-est-2d.html">cd-hit-est-2d</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+
+                        <li>
+                            <a href="pages/forms.html"><i class="fa fa-bar-chart-o fa-fw"></i> Result </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-13">
+                        <h1 class="page-header"><b>Server home</b></h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <div class="row">
+                    <div class="col-lg-13">
+                        <div class="jumbotron">
+                            <h1>CD-HIT Suite</h1>
+                            <hr />
+                            <p>CD-HIT package can perform various jobs like clustering a protein database, clustering a
+                                DNA/RNA database, comparing two databases (protein or DNA/RNA), and generating protein
+                                families. More infomation is available at <a href="http://cd-hit.org/">home page.</a></p>
+                            <p>
+                                <a href="#each-server" class="btn btn-primary btn-lg" role="button">Learn more</a>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <div class="row" id="each-server">
+                <div class="col-lg-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <b>cd-hit</b>
+                        </div>
+                        <div class="panel-body">
+                            <p>CD-HIT clusters proteins that meet a similarity threshold, usually a sequence identity.
+                                Each cluster has one representative sequence. The input is a protein dataset in fasta
+                                format. It generates a fasta file of representative sequences and a text file of list
+                                of clusters.</p>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="">Click here -></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-lg-4 -->
+
+                <div class="col-lg-4">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <b>h-cd-hit</b>
+                        </div>
+                        <div class="panel-body">
+                            <p>Multiple CD-HIT runs. Proteins are first clustered at a high identity (like 90%), the
+                                non-redundant sequences are further clustered at a low identity (like 60%). A third
+                                cluster can be performed at lower identity. Multi-step run is more efficient and more
+                                accurate than a single run. </p>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="">Click here -></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <b>cd-hit-2d</b>
+                        </div>
+                        <div class="panel-body">
+                            <p>CD-HIT-2D compares 2 protein datasets (db1, db2). It identifies the sequences in db2
+                                that are similar to db1 at a certain threshold. The input are two protein datasets
+                                (db1, db2) in fasta format and the output are two files: a fasta file of proteins in
+                                db2 that are not similar to db1 and a text file that lists similar sequences between
+                                db1 & db2. </p>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="">Click here -></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <b>cd-hit-est</b>
+                        </div>
+                        <div class="panel-body">
+                            <p>CD-HIT-EST clusters a nucleotide sequences that meet a similarity threshold, usually a
+                                sequence identity. The input is a DNA/RNA dataset in fasta format It generates a fasta
+                                file of representative sequences and a text file of list of clusters. It can not be
+                                used for very long sequences, like full genomes. </p>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="">Click here -></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <b>h-cd-hit-est</b>
+                        </div>
+                        <div class="panel-body">
+                            <p>Multiple CD-HIT-EST runs. </p>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="">Click here -></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-lg-4 -->
+
+                <div class="col-lg-4">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <b>cd-hit-est-2d</b>
+                        </div>
+                        <div class="panel-body">
+                            <p>Like CD-HIT-2D, CD-HIT-EST-2D compares 2 nucleotide datasets. For same reason as
+                                CD-HIT-EST, CD-HIT-EST-2D is not good for very long sequences. </p>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="">Click here -></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row -->
+            <div class="col-lg-15">
+                <div class="well">
+                    <h4><b>Reference:</b></h4>
+                    <p>1. Ying Huang, Beifang Niu, Ying Gao, Limin Fu and Weizhong Li. CD-HIT Suite: a web server
+                        for clustering and comparing biological sequences. Bioinformatics, 2010(26): 680-682. <a href="http://bioinformatics.oxfordjournals.org/content/26/5/680">full
+                            text</a></p>
+                    <p>2. Weizhong Li and Adam Godzik. Cd-hit: a fast program for clustering and comparing large
+                        sets of protein or nucleotide sequences. Bioinformatics, 2006(22): 1658-1659. <a href="http://bioinformatics.oxfordjournals.org/cgi/content/full/22/13/1658">full
+                            text</a></p>
+                    <p>3. Weizhong Li, Lukasz Jaroszewski and Adam Godzik. Tolerating some redundancy significantly
+                        speeds up clustering of large protein databases. Bioinformatics, 2002(18): 77-82. <a href="http://bioinformatics.oxfordjournals.org/cgi/reprint/18/1/77">full
+                            text</a></p>
+                    <p>4. Weizhong Li, Lukasz Jaroszewski and Adam Godzik. Clustering of highly homologous
+                        sequences to reduce the size of large protein databases. Bioinformatics, 2001(17): 282-283.
+                        <a href="http://bioinformatics.oxfordjournals.org/cgi/reprint/17/3/282">full text</a></p>
+                </div>
+            </div>
+            <div class="col-lg-15" style="text-align:center;">
+                <b>Developed by@<a href="mailto:Crai.Zhe@gmail.com">Zhipeng He</a></b>
+            </div>
+            <!-- /.col-lg-4 -->
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="./vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="./vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="./dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>
