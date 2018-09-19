@@ -107,7 +107,7 @@
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="pages/login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -174,211 +174,436 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Forms</h1>
+                    <h1 class="page-header text-primary">cd-hit</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-            <!-- /.row -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Basic Form Elements
-                        </div>
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <form role="form">
-                                        <div class="form-group">
-                                            <label>Text Input</label>
-                                            <input class="form-control">
-                                            <p class="help-block">Example block-level help text here.</p>
+            <form role="form">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <b class="text-success">Sequence file and databases</b>
+                                <p class="btn fa fa-question-circle" data-toggle="modal" data-target="#about1"></p>
+                            </div>
+                            <div class="modal fade" id="about1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">About</h4>
                                         </div>
-                                        <div class="form-group">
-                                            <label>Text Input with Placeholder</label>
-                                            <input class="form-control" placeholder="Enter text">
+                                        <div class="modal-body">
+                                            In current version, the maximu size of uploaded files is 50MB.
                                         </div>
-                                        <div class="form-group">
-                                            <label>Static Control</label>
-                                            <p class="form-control-static">email@example.com</p>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                         </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>
+                            <!-- /.modal -->
+
+                            <div class="panel-body">
+                                <div class="row" style="text-align:left;">
+                                    <div class="col-lg-6">
+                                        <b>></b> Load Query Fasta file from your computer <b>:</b>
+                                    </div>
+                                    <div class="col-lg-6">
                                         <div class="form-group">
-                                            <label>File input</label>
                                             <input type="file">
                                         </div>
-                                        <div class="form-group">
-                                            <label>Text area</label>
-                                            <textarea class="form-control" rows="3"></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Checkboxes</label>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value="">Checkbox 1
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value="">Checkbox 2
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value="">Checkbox 3
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Inline Checkboxes</label>
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox">1
-                                            </label>
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox">2
-                                            </label>
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox">3
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Radio Buttons</label>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"
-                                                        checked>Radio 1
-                                                </label>
-                                            </div>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Radio
-                                                    2
-                                                </label>
-                                            </div>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Radio
-                                                    3
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Inline Radio Buttons</label>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1"
-                                                    value="option1" checked>1
-                                            </label>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2"
-                                                    value="option2">2
-                                            </label>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3"
-                                                    value="option3">3
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Selects</label>
-                                            <select class="form-control">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Multiple Selects</label>
-                                            <select multiple class="form-control">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
-                                        </div>
-                                        <button type="submit" class="btn btn-default">Submit Button</button>
-                                        <button type="reset" class="btn btn-default">Reset Button</button>
-                                    </form>
+                                    </div>
                                 </div>
-                                <!-- /.col-lg-6 (nested) -->
-                                <div class="col-lg-6">
-                                    <h1>Disabled Form States</h1>
-                                    <form role="form">
-                                        <fieldset disabled>
-                                            <div class="form-group">
-                                                <label for="disabledSelect">Disabled input</label>
-                                                <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input"
-                                                    disabled>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="disabledSelect">Disabled select menu</label>
-                                                <select id="disabledSelect" class="form-control">
-                                                    <option>Disabled select</option>
-                                                </select>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox">Disabled Checkbox
-                                                </label>
-                                            </div>
-                                            <button type="submit" class="btn btn-primary">Disabled Button</button>
-                                        </fieldset>
-                                    </form>
-                                    <h1>Form Validation States</h1>
-                                    <form role="form">
-                                        <div class="form-group has-success">
-                                            <label class="control-label" for="inputSuccess">Input with success</label>
-                                            <input type="text" class="form-control" id="inputSuccess">
-                                        </div>
-                                        <div class="form-group has-warning">
-                                            <label class="control-label" for="inputWarning">Input with warning</label>
-                                            <input type="text" class="form-control" id="inputWarning">
-                                        </div>
-                                        <div class="form-group has-error">
-                                            <label class="control-label" for="inputError">Input with error</label>
-                                            <input type="text" class="form-control" id="inputError">
-                                        </div>
-                                    </form>
-                                    <h1>Input Groups</h1>
-                                    <form role="form">
-                                        <div class="form-group input-group">
-                                            <span class="input-group-addon">@</span>
-                                            <input type="text" class="form-control" placeholder="Username">
-                                        </div>
-                                        <div class="form-group input-group">
-                                            <input type="text" class="form-control">
-                                            <span class="input-group-addon">.00</span>
-                                        </div>
-                                        <div class="form-group input-group">
-                                            <span class="input-group-addon"><i class="fa fa-eur"></i>
-                                            </span>
-                                            <input type="text" class="form-control" placeholder="Font Awesome Icon">
-                                        </div>
-                                        <div class="form-group input-group">
-                                            <span class="input-group-addon">$</span>
-                                            <input type="text" class="form-control">
-                                            <span class="input-group-addon">.00</span>
-                                        </div>
-                                        <div class="form-group input-group">
-                                            <input type="text" class="form-control">
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-default" type="button"><i class="fa fa-search"></i>
-                                                </button>
-                                            </span>
-                                        </div>
-                                    </form>
+                                <div class="row" style="text-align:left;">
+                                    <div class="col-lg-6">
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox"> Incorporate annotation info at header line
+                                        </label>
+                                        <p class="btn fa fa-question-circle" data-toggle="modal" data-target="#about2"></p>
+                                    </div>
                                 </div>
-                                <!-- /.col-lg-6 (nested) -->
+
                             </div>
-                            <!-- /.row (nested) -->
+                            <div class="modal fade" id="about2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">About</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            If this option is checked, the header lines of the input fasta file should
+                                            have format: '>SequenceID||term1,term2', here term1, term2 is the function
+                                            annotation of corresponding input sequence, seperated by comma (no space).
+                                            The user can leave it blank if the sequence has not been annotated. You can
+                                            click result tab for sample data.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>
+                            <!-- /.modal -->
+
                         </div>
-                        <!-- /.panel-body -->
+                        <!-- /.panel -->
                     </div>
-                    <!-- /.panel -->
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <b class="text-success">Sequence Identity Parameters</b>
+                            </div>
+
+                            <div class="panel-body">
+                                <div class="row" style="text-align:left;">
+                                    <div class="col-lg-6">
+                                        <b>></b> Sequence identity cut-off <b>:</b>
+                                        <p class="btn fa fa-question-circle" data-toggle="modal" data-target="#about3"></p>
+                                    </div>
+                                    <div class="form-group col-lg-1">
+                                        <input class="form-control" placeholder="0.9">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="about3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">About</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            Sequence identity cut-off should be a float between 0 to 1, 0.9 means 90%
+                                            identity.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>
+                            <!-- /.modal -->
+
+                        </div>
+                        <!-- /.panel -->
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <b class="text-success">Algorithm Parameters</b>
+                            </div>
+
+                            <div class="panel-body">
+                                <div class="row" style="text-align:left;">
+                                    <div class="col-lg-6">
+                                        <b>></b> -G: use global sequence identity<p class="btn fa fa-question-circle"
+                                            data-toggle="modal" data-target="#about4"></p>
+                                    </div>
+                                    <div class="col-lg-2 form-group">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="optionsRadiosOne" id="optionsRadiosInline1"
+                                                value="option1" checked>yes
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="optionsRadiosOne" id="optionsRadiosInline2"
+                                                value="option2">no
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="row" style="text-align:left;">
+                                    <div class="col-lg-6">
+                                        <b>></b> -g: sequence is clustered to the best cluster that meet the threshold<p
+                                            class="btn fa fa-question-circle" data-toggle="modal" data-target="#about5"></p>
+                                    </div>
+                                    <div class="col-lg-2 form-group">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="optionsRadiosTwo" id="optionsRadiosInline1"
+                                                value="option1" checked>yes
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="optionsRadiosTwo" id="optionsRadiosInline2"
+                                                value="option2">no
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="row" style="text-align:left;">
+                                    <div class="col-lg-6">
+                                        <b>></b> -b: bandwidth of alignment
+                                        <p class="btn fa fa-question-circle" data-toggle="modal" data-target="#about6"></p>
+                                    </div>
+                                    <div class="form-group col-lg-1">
+                                        <input class="form-control" placeholder="20">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="modal fade" id="about4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">About</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            Use global sequence identity or local sequence identity, local sequence
+                                            identity was calculated as : number of identical amino acids in alignment
+                                            divided by the length of the alignment.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>
+                            <!-- /.modal -->
+
+
+                            <div class="modal fade" id="about5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">About</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            By cd-hit's default algorithm, a sequence is clustered to the first cluster
+                                            that meet the threshold (fast mode). If set to yes, the program will
+                                            cluster it into the most similar cluster that meet the threshold (accurate
+                                            but slow mode).
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>
+                            <!-- /.modal -->
+
+                            <div class="modal fade" id="about6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">About</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            Band width of alignment, should be a positive integer.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>
+                            <!-- /.modal -->
+
+
+                        </div>
+                        <!-- /.panel -->
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <b class="text-success">Alignment Coverage Parameters</b>
+                                <p class="btn fa fa-question-circle" data-toggle="modal" data-target="#about7"></p>
+                            </div>
+
+                            <div class="panel-body">
+
+                                <div class="row" style="text-align:left;">
+                                    <div class="col-lg-6">
+                                        <b>></b> -aL: minimal alignment coverage (fraction) for the longer sequence
+                                    </div>
+                                    <div class="form-group col-lg-1">
+                                        <input class="form-control" placeholder="0.0">
+                                    </div>
+                                </div>
+
+                                <div class="row" style="text-align:left;">
+                                    <div class="col-lg-6">
+                                        <b>></b> -AL: maximum unaligned part (amino acids/bases) for the longer
+                                        sequence
+                                    </div>
+                                    <div class="form-group col-lg-1">
+                                        <input class="form-control" placeholder="unlimited">
+                                    </div>
+                                </div>
+
+                                <div class="row" style="text-align:left;">
+                                    <div class="col-lg-6">
+                                        <b>></b> -aS: minimal alignment coverage (fraction) for the shorter sequence
+                                    </div>
+                                    <div class="form-group col-lg-1">
+                                        <input class="form-control" placeholder="0.0">
+                                    </div>
+                                </div>
+
+                                <div class="row" style="text-align:left;">
+                                    <div class="col-lg-6">
+                                        <b>></b> -AS: maximum unaligned part (amino acids/bases) for the shorter
+                                        sequence
+                                    </div>
+                                    <div class="form-group col-lg-1">
+                                        <input class="form-control" placeholder="unlimited">
+                                    </div>
+                                </div>
+
+                                <div class="row" style="text-align:left;">
+                                    <div class="col-lg-6">
+                                        <b>></b> -s: minimal length similarity (fraction)
+                                    </div>
+                                    <div class="form-group col-lg-1">
+                                        <input class="form-control" placeholder="0.0">
+                                    </div>
+                                </div>
+
+                                <div class="row" style="text-align:left;">
+                                    <div class="col-lg-6">
+                                        <b>></b> -S: maximum length difference in amino acids/bases(-S)
+                                    </div>
+                                    <div class="form-group col-lg-1">
+                                        <input class="form-control" placeholder="unlimited">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="modal fade" id="about7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">About</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            Sequence identity cut-off should be a float between 0 to 1, 0.9 means 90%
+                                            identity.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>
+                            <!-- /.modal -->
+
+                        </div>
+                        <!-- /.panel -->
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <b class="text-success">Alignment Coverage Parameters</b>
+                                <p class="btn fa fa-question-circle" data-toggle="modal" data-target="#about7"></p>
+                            </div>
+
+                            <div class="panel-body">
+
+                                <div class="row" style="text-align:left;">
+                                    <div class="col-lg-6">
+                                        <b class="fa fa-envelope"> Give your mail address:</b>
+                                    </div>
+                                    <div class="form-group col-lg-2">
+                                        <input class="form-control">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="modal fade" id="about7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">About</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            Sequence identity cut-off should be a float between 0 to 1, 0.9 means 90%
+                                            identity.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>
+                            <!-- /.modal -->
+
+                        </div>
+                        <!-- /.panel -->
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <button type="submit" class="btn btn-success col-lg-6">Submit</button>
+                        <button type="reset" class="btn btn-warning col-lg-6">Reset</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h5 class="page-header"> </a></h5>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-            <!-- /.row -->
+            <div class="row">
+                <div style="text-align:center;">
+                    <h5><b>Developed by @<a href="mailto:Crai.Zhe@gmail.com">Zhipeng He</a></b></h5>
+                </div>
+            </div>
         </div>
         <!-- /#page-wrapper -->
 
