@@ -178,7 +178,8 @@
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-            <form role="form">
+            <form role="form" action="../cgi-bin/cdhit.cgi" method="POST" enctype="multipart/form-data"><input type="hidden"
+                    name="program" value="cd-hit-est" />
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="panel panel-default">
@@ -214,14 +215,15 @@
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <input type="file" name="file1">
+                                            <input type="file" name="SeqF">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row" style="text-align:left;">
                                     <div class="col-lg-6">
                                         <label class="checkbox-inline">
-                                            <input type="checkbox"> Incorporate annotation info at header line
+                                            <input type="checkbox" name='anno'> Incorporate annotation info at header
+                                            line
                                         </label>
                                         <p class="btn fa fa-question-circle" data-toggle="modal" data-target="#about2"></p>
                                     </div>
@@ -268,15 +270,18 @@
                             </div>
 
                             <div class="panel-body">
+
                                 <div class="row" style="text-align:left;">
                                     <div class="col-lg-6">
                                         <b>></b> Sequence identity cut-off <b>:</b>
                                         <p class="btn fa fa-question-circle" data-toggle="modal" data-target="#about3"></p>
                                     </div>
+                                    <input type="hidden" name="level" value="1" />
                                     <div class="form-group col-lg-1">
-                                        <input class="form-control" placeholder="0.9">
+                                            <input class="form-control" name="lc1" value="0.9">
                                     </div>
                                 </div>
+                                
                             </div>
                             <div class="modal fade" id="about3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                                 aria-hidden="true">
@@ -323,10 +328,11 @@
                                     </div>
                                     <div class="col-lg-2 form-group">
                                         <label class="radio-inline">
-                                            <input type="radio" name="optionsRadiosThree" id="optionsRadiosInline1" value="option1">yes
+                                            <input type="radio" name="lr" id="optionsRadiosInline1" value="1">yes
                                         </label>
                                         <label class="radio-inline">
-                                            <input type="radio" name="optionsRadiosThree" id="optionsRadiosInline2" value="option2" checked>no
+                                            <input type="radio" name="lr" id="optionsRadiosInline2" value="0"
+                                                checked>no
                                         </label>
                                     </div>
                                 </div>
@@ -338,11 +344,11 @@
                                     </div>
                                     <div class="col-lg-2 form-group">
                                         <label class="radio-inline">
-                                            <input type="radio" name="optionsRadiosOne" id="optionsRadiosInline1" value="option1"
+                                            <input type="radio" name="uG" id="optionsRadiosInline1" value="1"
                                                 checked>yes
                                         </label>
                                         <label class="radio-inline">
-                                            <input type="radio" name="optionsRadiosOne" id="optionsRadiosInline2" value="option2">no
+                                            <input type="radio" name="uG" id="optionsRadiosInline2" value="0">no
                                         </label>
                                     </div>
                                 </div>
@@ -354,11 +360,11 @@
                                     </div>
                                     <div class="col-lg-2 form-group">
                                         <label class="radio-inline">
-                                            <input type="radio" name="optionsRadiosTwo" id="optionsRadiosInline1" value="option1"
+                                            <input type="radio" name="lg" id="optionsRadiosInline1" value="1"
                                                 checked>yes
                                         </label>
                                         <label class="radio-inline">
-                                            <input type="radio" name="optionsRadiosTwo" id="optionsRadiosInline2" value="option2">no
+                                            <input type="radio" name="lg" id="optionsRadiosInline2" value="0">no
                                         </label>
                                     </div>
                                 </div>
@@ -369,7 +375,7 @@
                                         <p class="btn fa fa-question-circle" data-toggle="modal" data-target="#about6"></p>
                                     </div>
                                     <div class="form-group col-lg-1">
-                                        <input class="form-control" placeholder="20">
+                                        <input class="form-control" name="lb" value="20">
                                     </div>
                                 </div>
 
@@ -489,7 +495,7 @@
                                         <b>></b> -aL: minimal alignment coverage (fraction) for the longer sequence
                                     </div>
                                     <div class="form-group col-lg-1">
-                                        <input class="form-control" placeholder="0.0">
+                                        <input class="form-control" name="lauL" value="0.0">
                                     </div>
                                 </div>
 
@@ -499,7 +505,7 @@
                                         sequence
                                     </div>
                                     <div class="form-group col-lg-1">
-                                        <input class="form-control" placeholder="unlimited">
+                                        <input class="form-control" name="uAuL" value="unlimited">
                                     </div>
                                 </div>
 
@@ -508,7 +514,7 @@
                                         <b>></b> -aS: minimal alignment coverage (fraction) for the shorter sequence
                                     </div>
                                     <div class="form-group col-lg-1">
-                                        <input class="form-control" placeholder="0.0">
+                                        <input class="form-control" name="lauS" value="0.0">
                                     </div>
                                 </div>
 
@@ -518,7 +524,7 @@
                                         sequence
                                     </div>
                                     <div class="form-group col-lg-1">
-                                        <input class="form-control" placeholder="unlimited">
+                                        <input class="form-control" name="uAuS" value="unlimited">
                                     </div>
                                 </div>
 
@@ -527,7 +533,7 @@
                                         <b>></b> -s: minimal length similarity (fraction)
                                     </div>
                                     <div class="form-group col-lg-1">
-                                        <input class="form-control" placeholder="0.0">
+                                        <input class="form-control" name="ls" value="0.0">
                                     </div>
                                 </div>
 
@@ -536,7 +542,7 @@
                                         <b>></b> -S: maximum length difference in amino acids/bases(-S)
                                     </div>
                                     <div class="form-group col-lg-1">
-                                        <input class="form-control" placeholder="unlimited">
+                                        <input class="form-control" name="uS" value="unlimited">
                                     </div>
                                 </div>
 
@@ -551,8 +557,13 @@
                                             <h4 class="modal-title" id="myModalLabel">About</h4>
                                         </div>
                                         <div class="modal-body">
-                                            Sequence identity cut-off should be a float between 0 to 1, 0.9 means 90%
-                                            identity.
+                                            <img src='../dist/css/images/coverage.gif'  alt='.' width='100%'>
+                                            <p style="text-align:center;">
+                                                <font size='+1'>
+                                                    aL = R<sub>a</sub> / R, AL = R- R<sub>a</sub> <br>  aS = S<sub>a</sub> / S, AS = S- S<sub>a</sub> <br>
+                                                    s = S<sub>a</sub> /  R<sub>a</sub>, S = R - S
+                                                </font>
+                                            </p>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
